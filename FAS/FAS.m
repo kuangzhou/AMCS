@@ -1,7 +1,7 @@
 function  FAS(train_data,lab_tr,test_data,lab_ts,cn)
 % Using FCBF as feature selection method, Adaboost as ensemble framework and SVM as base classifier
 addpath(genpath(pwd));
-tsnum=length(lab_tr);
+tsnum=length(lab_ts);
 
 gBest=FCBF(train_data,lab_tr);
 [FAhypo,AUCarea]=FCompareAUC(train_data,lab_tr,test_data,lab_ts,gBest);
